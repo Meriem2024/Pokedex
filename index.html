@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/ball.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <title>Pokedex</title>
+</head>
+
+<body>
+
+  <div class="main-content">
+    <header>
+      <h1><img class="headerImg" src="./img/ball.jpg"> Pokedex</h1>
+
+      <input type="text" placeholder="Suche nach Pokemon..." id="search" oninput="searchPokemon()">
+    </header>
+
+    <div id="loading" class="hidden">Loading...</div>
+
+    <div class="pokemon-list" id="uniquePokemonList">
+    </div>
+
+    <div id="pokemonModal" class="modal displayNone">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">×</span>
+        <div id="pokemonDetails" class="pokemon-details">
+        </div>
+        <div class="modal-navigation">
+
+        </div>
+      </div>
+    </div>
+    <button id="loadMoreButton" onclick="loadMorePokemon()">Weitere Pokemon laden</button>
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
