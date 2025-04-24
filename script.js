@@ -131,7 +131,7 @@ function fetchPokemonDetails(pokemonName, index) {
 
 function searchPokemon() {
   let input = searchInput.value.toLowerCase();
-  if (input.length === 0 || input.length <= 2) {
+  if (input.length === 0 || input.length <= 1) {
     pokemonList.innerHTML = "";
     alreadyLoadedPokemon.forEach((pokemonName, index) => {
       let pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
